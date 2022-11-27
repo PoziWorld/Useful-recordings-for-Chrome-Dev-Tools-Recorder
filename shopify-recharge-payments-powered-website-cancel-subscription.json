@@ -1,0 +1,82 @@
+{
+  "title": "Shopify (ReCharge Payments) powered website → Cancel subscription",
+  "steps": [
+    {
+      "type": "setViewport",
+      "width": 1024,
+      "height": 768,
+      "deviceScaleFactor": 1,
+      "isMobile": false,
+      "hasTouch": false,
+      "isLandscape": false
+    },
+    {
+      "type": "navigate",
+      "url": "https://shop.EXAMPLE.com/tools/recurring/portal/123abc123abc123abc123abc123abc/subscriptions?token=123abc123abc123abc123abc123abc123ab",
+      "timeout": 25000,
+      "assertedEvents": [
+        {
+          "type": "navigation",
+          "url": "https://shop.truvani.com/tools/recurring/portal/7a55d9585ae293dfcf94545ab08d75/subscriptions?token=36527f2110194abeb4095570e1b7f333",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          "#MainContent > div.recharge-te > div > section > div:nth-child(2) > section > div:nth-child(2)"
+        ]
+      ],
+      "timeout": 25000,
+      "target": "main",
+      "offsetX": 720,
+      "offsetY": 45
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          "aria/Cancel subscription"
+        ],
+        [
+          "#MainContent > div.recharge-te > div > section > section > div:nth-child(7) > button:nth-child(2)"
+        ]
+      ],
+      "duration": 10000,
+      "target": "main",
+      "offsetX": 85,
+      "offsetY": 20
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          ".rct_sidebar.slideout-menu.slideout-menu-right[aria-hidden=\"false\"] button.rct_button--primary"
+        ]
+      ],
+      "timeout": 15000,
+      "target": "main",
+      "duration": 10000,
+      "offsetX": 155,
+      "offsetY": 20
+    },
+    {
+      "type": "click",
+      "selectors": [
+        [
+          "aria/Cancel"
+        ],
+        [
+          "#ReChargeForm-subscription-cancel-default > div.rct_form__actions > button"
+        ]
+      ],
+      "timeout": 25000,
+      "target": "main",
+      "offsetX": 85,
+      "offsetY": 25
+    }
+  ],
+  "timeout": 25000
+}
